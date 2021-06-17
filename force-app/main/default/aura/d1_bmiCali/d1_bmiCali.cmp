@@ -1,0 +1,18 @@
+<aura:component>
+    
+    <aura:attribute name="weight" type="decimal"/>
+    <aura:attribute name="height" type="decimal"/>
+    <aura:attribute name="outputBmi" type="decimal" default="0.0"/>
+
+    <div class="slds-var-m-around_medium slds-border_top slds-border_bottom">
+        <h2>BMI Calculator</h2>
+    <p> Units in metric</p>
+        <lightning:input label="Weight (kg)" value="{!v.weight}" placeholder="in KG"/>
+        <lightning:input label="Height (cm)" value="{!v.height}" placeholder="in cm "/>
+
+        <lightning:button label="Calulate BMI" onclick="{!c.getBmi}" />
+
+    <p> Units in metric</p>
+    <p>BMI = {!v.outputBmi}</p>
+</div>
+</aura:component>	

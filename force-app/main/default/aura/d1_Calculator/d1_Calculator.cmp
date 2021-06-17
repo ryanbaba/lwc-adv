@@ -1,0 +1,20 @@
+<aura:component>
+    <aura:attribute name="fistValue" type="Integer"/>
+    <aura:attribute name="secondValue" type="Integer"/>
+    <aura:attribute name="outputValue" type="Integer"/>
+
+
+    <lightning:input label="Fist Value" value="{!v.fistValue}"/>
+    <lightning:input label="Second Value" value="{!v.secondValue}"/>
+
+    <lightning:button label="Add" onclick="{!c.add}"/>
+    <lightning:button label="Subtract" onclick="{!c.sub}"/>
+    <lightning:button label="Multiple" onclick="{!c.multi}"/>
+    <lightning:button label="Division" onclick="{!c.divi}"/>
+
+
+    <p>Output is {!v.outputValue}</p>
+
+
+
+</aura:component>
