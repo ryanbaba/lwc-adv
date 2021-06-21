@@ -1,12 +1,13 @@
 ({
     removeItem : function(component, event, helper) {
-        console.log('hi..');
+        console.log('1.');
 
-        // let itemIndex = component.get('c.indexNum');
-        var indexPosition = event.target.name;
-        console.log('hi..');
+        let itemIndex = component.get('c.indexNum');
+        console.log('2..');
+
+        // var indexPosition = event.target.name;
         let eduList = component.get('c.eduList');
-        eduList.splice(indexPosition);
+        eduList.splice(itemIndex);
         component.set('c.eduList',eduList);
     }
 })
