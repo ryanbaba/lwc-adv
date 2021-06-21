@@ -1,0 +1,9 @@
+<aura:component>
+    <aura:attribute name="indexNum" type="Integer"/>
+    <aura:attribute name="eduList" type="List" default="[]"/>
+
+    <p>Educational Details - {!v.indexNum+1}</p>
+    <lightning:input label="Course Name"/>
+    <lightning:input label="Institution"/>
+    <lightning:button label="Remove" variant="destructive" onclick="{!c.removeItem}"/>
+</aura:component>	

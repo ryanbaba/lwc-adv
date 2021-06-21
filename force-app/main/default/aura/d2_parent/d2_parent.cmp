@@ -1,0 +1,20 @@
+<aura:component>
+ 
+    <p>Registration Form</p>
+    <aura:attribute name="eduList" type="List" default="[]"/>
+    <div class="slds-box">
+    <lightning:input label="Name" />
+    <lightning:input label="Email" type="email" />
+    <lightning:input label="Phone" type="phone" />
+
+    <aura:iteration items="{!v.eduList}" var="item"  indexVar="index">
+        <div class="slds-box">
+            <c:d2_child 
+                indexNum="{!index}" 
+                eduList="{!eduList}"/> <!--y no, !V. here-->
+        </div>
+    </aura:iteration>
+    
+    <lightning:button label="Add Education Details" onclick="{!c.addEduRow}" />
+</div>
+</aura:component>	
