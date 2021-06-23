@@ -10,11 +10,11 @@
     <aura:iteration items="{!v.eduList}" var="item"  indexVar="index">
         <div class="slds-box">
             <c:d2_child 
-                indexNum="{!index}" 
-                eduList="{!eduList}"/> <!--y no, !V. here-->
+                indexNo="{!index}" 
+                eduList2="{!v.eduList}"/> <!--y no, !V. here-->
         </div>
     </aura:iteration>
     
     <lightning:button label="Add Education Details" onclick="{!c.addEduRow}" />
 </div>
-</aura:component>	
+</aura:component>
